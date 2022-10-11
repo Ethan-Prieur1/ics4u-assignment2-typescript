@@ -1,7 +1,7 @@
 /**
  * The program gets the max run
  *
- * By:      Michael Clermont
+ * By:      Ethan Prieur
  * Version: 1.0
  * Since:   2022-10-12
  */
@@ -9,12 +9,12 @@
 import promptSync from 'prompt-sync'
 
 /**
- * The function calculates the max run of a string
+ * The function finds the max run
  *
  * @param {string} userWord  - String variable
  * @returns {number} Return value
  */
-function maxRunCalculator(userWord: string): number {
+function maxRunFunction(userWord: string): number {
   let maxRun = 1
   let tempValue = 1
   for (let counter = 0; counter < userWord.length; counter++) {
@@ -36,7 +36,7 @@ function maxRunCalculator(userWord: string): number {
 
 const prompt = promptSync()
 const userString = prompt('Enter a string: ')
-const maxRunValue = maxRunCalculator(userString)
-console.log(`The max amount of values in a row is ${maxRunValue}`)
+const maxRunValue = maxRunFunction(userString)
+console.log(`The max run is ${maxRunValue}`)
 
 console.log('\nDone.')
